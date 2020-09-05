@@ -8,12 +8,16 @@ public class Main {
 		Scanner scanner = new Scanner();
 		ArrayList<Token> tokens;
 		
-		str = "MOV 2354 #A ;";
+		str = "SUM 5 5 ;";
 		
 		tokens = scanner.scan(str);
 		for(Token token: tokens) {
 			System.out.println(token.tokenToString());
 		}
+		
+	    Parser parser;
+        parser = new Parser();
+        parser.parse(tokens);
 	}
 	
 }
